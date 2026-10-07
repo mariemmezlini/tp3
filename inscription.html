@@ -11,23 +11,35 @@
         <h2>vos inforamation</h2>
         <form action="merci.html" method="get">
             <fieldset>
-                <p><label for="nom">nom</label><input type="text" id="nom" name="nom"></p>
-                <p><label for="prenom">prenom</label><input type="text" id="prenom" name="prenom"></p>
-                <p><label for="email">adresse e mail</label><input type="email" id="email" name="email"></p>
-                 <p><label for="tel">telephone</label><input type="tel" id="telphone" name="telephone"></p>
-                 <p> <label for="mdp">modepasse</label><input type="password" id="mdp" name="mdp"></p>
-                   <p><label for="naissance">date de naissance</label><input type="date" id="naissance" name="naissance"></p></fieldset></form>
+                <p><label for="nom">nom</label><input type="text" id="nom" name="nom" required minlength="2"></p>
+                <p><label for="prenom">prenom</label><input type="text" id="prenom" name="prenom" required minlength="2"></p>
+                <p><label for="email">adresse e mail</label><input type="email" id="email" name="email" required></p>
+                 <p><label for="tel">telephone</label><input type="tel" id="tel" name="telephone" required placeholder="12345678" ></p>
+                 <p> <label for="mdp">modepasse</label><input type="password" id="mdp" name="mdp" required minlength="8"></p>
+                   <p><label for="naissance">date de naissance</label><input type="date" id="naissance" name="naissance" required min="1990-01-01" max="2010-12-31"></p></fieldset></form>
         
     </main>
     <section>
         <form><fieldset><legend>niveau en information</legend>
-        <input type="radio" id="debutant" name="niveau">debutant<br>
-        <input type="radio" id="intermediaire" name="niveau">intermediaire<br>
-        <input type="radio" id="avance" name="niveau">avance<br>
+        <input type="radio" id="debutant" name="niveau" checked required>debutant<br>
+        <input type="radio" id="intermediaire" name="niveau" required>intermediaire<br>
+        <input type="radio" id="avance" name="niveau" required>avance<br>
 
     </fieldset></form>
     <form><fieldset><legend>ateliers souhaites</legend>
-    <input type="checkbox" name=""></fieldset></form>
+    <input type="checkbox" name="atelier" value="python" checked>atelier python<br>
+   <input type="checkbox" name="atelier" value="jeux-video" checked>atelier jeux video<br></fieldset></form>
+   <label>annee d etudes </label>
+   <select name="annee">
+    <option value="" required>choisir</option>
+    <option value="1">1 ere</option>
+     <option value="2">2eme</option>
+      <option value="3">3eme annee</option>
+   </select><br>
+   <textarea type="text" cols="5" rows="40" name="motivation"></textarea>motivation<br>
+   <input type="checkbox" name="reglement" required><label>j accepte le reglement du club</label><br>
+   <input type="submit" value="envoyer">
+   <input type="reset" value="reinitialiser">
     </section>
     <footer><h1>club informatique <a href="atelier.html">retour a l accueil</a></h1></footer>
 </body>
